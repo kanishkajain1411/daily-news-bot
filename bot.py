@@ -6,7 +6,10 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 load_dotenv()
 
-TOKEN = os.getenv("8823659790:AAHV1QUYQisa18tNQkP7rbaZZ1vQZ2MWekc")
+TOKEN = os.getenv("BOT_TOKEN", "").strip()
+
+print("Token loaded:", bool(TOKEN))
+print("Token length:", len(TOKEN))
 RSS_URL = "https://feeds.bbci.co.uk/news/world/rss.xml"
 
 
